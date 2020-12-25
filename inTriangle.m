@@ -1,4 +1,4 @@
-function inTriangle
+function inTriangle(X)
 
 axis([-100 100 -100 100])
 hold on
@@ -17,30 +17,31 @@ end
 s=[x(1) x(2) x(3) x(1)];
 t=[y(1) y(2) y(3) y(1)];
 plot(s,t)
-plot(0,0,'o')
+plot(X(1),X(2),'o')
+
+x=x-X(1);
+y=y-X(2);
 
 m1=x(1)*y(2)-x(2)*y(1);
 m2=x(2)*y(3)-x(3)*y(2);
 m3=x(3)*y(1)-x(1)*y(3);
 
 if m1==0 || m2==0 || m3==0
-    disp('The original point is on the triangle.')
+    disp('The point is on the triangle.')
 end
 
 if m1>0
     if m2>0 && m3>0
-        disp('The original point is inside the triangle.')
+        disp('The point is inside the triangle.')
     else
-        disp('The original point is outside the triangle.')
+        disp('The point is outside the triangle.')
     end
 end
 
 if m1<0
     if m2<0 && m3<0
-        disp('The original point is inside the triangle.')
+        disp('The point is inside the triangle.')
     else
-        disp('The original point is outside the triangle.')
+        disp('The point is outside the triangle.')
     end
 end
-    
-
