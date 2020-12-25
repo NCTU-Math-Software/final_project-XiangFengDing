@@ -1,4 +1,3 @@
-# final_project-XiangFengDing
 # 原點是否在三角形內
 
 設定xy座標在正負100內。
