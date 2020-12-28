@@ -38,11 +38,11 @@ end
 if m(1)>0
     for kk=2:ii
         if m(kk)<0
-            disp('not')
+            disp('The point is outside the polygon.')
             break
         end
         if kk==ii && m(kk)>0
-            disp('yes')
+            disp('The point is inside the polygon.')
         end
     end
 end
